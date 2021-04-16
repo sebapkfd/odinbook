@@ -8,7 +8,6 @@ const Home = () => {
     const getData = async () => {
         const data = await getPostList();
         setPostList(data);
-        console.log(data);
     }
 
     useEffect(()=> {
