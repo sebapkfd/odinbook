@@ -11,3 +11,11 @@ export const signUp = async (body) => {
         console.log(err);
     }
 }
+
+export const logIn = async (body) => {
+    try {
+        
+    } catch (err) {
+        console.log(err);
+    }
+}
