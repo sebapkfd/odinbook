@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {logIn} from '../functions/userCalls';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -6,11 +7,9 @@ const SignUp = () => {
 
     const submitData = async (e) => {
         e.preventDefault();
-        // if(password === confirm) {
-        //     const body = {firstName, lastName, email, password};
-        //     await signUp(body);
-        //     window.location.reload();
-        // }
+        const body = {username: email, password};
+        await logIn(body);
+        window.location.reload();
     }
 
     return (
@@ -35,7 +34,7 @@ const SignUp = () => {
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
-                <button>Sign Up</button>
+                <button>Log In</button>
             </form>
         </div>
     )

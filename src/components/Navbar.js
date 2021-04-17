@@ -6,10 +6,10 @@ const Navbar = () => {
             <Link to='/'>
                 <button>Home</button>
             </Link>
-            <Link to='/sign-up'>
+            <Link to='/signup'>
                 <button>Sign Up</button>
             </Link>
-            <Link to='/log-in'>
+            <Link to='/login'>
                 <button>Log In</button>
             </Link>
         </div>

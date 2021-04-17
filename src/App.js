@@ -11,10 +11,10 @@ function App() {
       <BrowserRouter>
       <Navbar/>
         <Switch>
-          <Route exact path={'/sign-up'}>
+          <Route exact path={'/signup'}>
             <SignUp/>
           </Route>
-          <Route exact path={'/log-in'}>
+          <Route exact path={'/login'}>
             <LogIn/>
           </Route>
           <Route path={'/'}>
