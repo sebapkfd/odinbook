@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
+import Router from './components/Router';
 
 function App() {
   return (
@@ -17,9 +18,7 @@ function App() {
           <Route exact path={'/login'}>
             <LogIn/>
           </Route>
-          <Route path={'/'}>
-            <Home/>
-          </Route>
+          <Router component={<Home/>} path={'/'}/>
         </Switch>
       </BrowserRouter>
     </div>

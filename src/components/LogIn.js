@@ -1,14 +1,17 @@
 import {useState} from 'react';
 import {logIn} from '../functions/userCalls';
+import {useHistory} from 'react-router-dom';
 
-const SignUp = () => {
+const LogIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const history = useHistory();
 
     const submitData = async (e) => {
         e.preventDefault();
         const body = {username: email, password};
         await logIn(body);
+        history.push('/');
         window.location.reload();
     }
 
@@ -40,4 +43,4 @@ const SignUp = () => {
     )
 }
 
-export default SignUp;
+export default LogIn;

@@ -6,6 +6,9 @@ const Navbar = () => {
 
     const sessionOpts = (verifySession()) ? (
         <div className='session'>
+            <Link to='/'>
+                <button>Home</button>
+            </Link>
             <LogOut/>
         </div>
     ):(
@@ -21,9 +24,6 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
-            <Link to='/'>
-                <button>Home</button>
-            </Link>
             {sessionOpts}
         </div>
     )

@@ -6,8 +6,8 @@ const LogOut = () => {
 
     const clearData = (e) => {
         e.preventDefault();
-        localStorage.clear()
-        history.push('/')
+        localStorage.clear();
+        history.push('/');
         window.location.reload();
     }
 
