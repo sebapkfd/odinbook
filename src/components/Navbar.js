@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import LogOut from './LogOut';
 
 const Navbar = () => {
     return (
@@ -12,6 +13,7 @@ const Navbar = () => {
             <Link to='/login'>
                 <button>Log In</button>
             </Link>
+            <LogOut/>
         </div>
     )
 }
