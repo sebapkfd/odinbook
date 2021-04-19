@@ -4,12 +4,14 @@ import {getPostDetail} from '../functions/postsCalls';
 
 const PostPage = () => {
     const [post, setPost] = useState(null);
+    const [comments, setComments] = useState([]);
     const {id} = useParams();
 
     const getData = async () => {
-        const data = await getPostDetail(id);
-        console.log(data);
-        setPost(data);
+        const {postDetail, postComments} = await getPostDetail(id);
+        console.log(postDetail);
+        setPost(postDetail);
+        setComments(postComments);
     };
 
     useEffect(() => {
@@ -18,7 +20,11 @@ const PostPage = () => {
 
     if(post) {
         return (
-            <div>{post._id}</div>
+            <div>
+                <p>{post.user.firstName} {post.user.lastName}</p>
+                <h2>{post.text}</h2>
+                <p>{post.likes.length} Likes</p>
+            </div>
         )
     }
     return null;
