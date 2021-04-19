@@ -11,7 +11,6 @@ const Router = (props) => {
     ):(
         <Redirect to='login'/>
     )
-    
 
     return (
         <div>{option}</div>

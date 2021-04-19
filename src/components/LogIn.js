@@ -16,7 +16,7 @@ const LogIn = () => {
     }
 
     return (
-        <div className='sign-up'>
+        <div className='log-in'>
             <form onSubmit={submitData}>
                 <label>Email</label>
                 <input

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {getPostList} from '../functions/postsCalls';
 import PostItem from './PostItem';
+import PostInput from './PostInput';
 
 const Home = () => {
     const [postList, setPostList] = useState([]);
@@ -17,6 +18,7 @@ const Home = () => {
     return (
         <div>
             <h1>Home</h1>
+            <PostInput/>
             {postList.map(post => {
                 return (
                     <PostItem
