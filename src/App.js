@@ -5,6 +5,7 @@ import Home from './components/Home';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import Router from './components/Router';
+import PostPage from './components/PostPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path={'/login'}>
             <LogIn/>
           </Route>
+          <Router component={<PostPage/>} path={'/posts/:id'}/>
           <Router component={<Home/>} path={'/'}/>
         </Switch>
       </BrowserRouter>
