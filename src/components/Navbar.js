@@ -1,19 +1,30 @@
 import {Link} from 'react-router-dom';
 import LogOut from './LogOut';
+import verifySession from '../functions/verifySession';
 
 const Navbar = () => {
-    return (
-        <div className='navbar'>
-            <Link to='/'>
-                <button>Home</button>
-            </Link>
+
+    const sessionOpts = (verifySession()) ? (
+        <div className='session'>
+            <LogOut/>
+        </div>
+    ):(
+        <div className='session'>
             <Link to='/signup'>
                 <button>Sign Up</button>
             </Link>
             <Link to='/login'>
                 <button>Log In</button>
             </Link>
-            <LogOut/>
+        </div>
+    );
+
+    return (
+        <div className='navbar'>
+            <Link to='/'>
+                <button>Home</button>
+            </Link>
+            {sessionOpts}
         </div>
     )
 }
