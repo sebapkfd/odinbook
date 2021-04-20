@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {getPostDetail} from '../functions/postsCalls';
 import CommentList from './CommentList';
+import CommentInput from './CommentInput';
 
 const PostPage = () => {
     const [post, setPost] = useState(null);
@@ -24,6 +25,7 @@ const PostPage = () => {
                 <p>{post.user.firstName} {post.user.lastName}</p>
                 <h2>{post.text}</h2>
                 <p>{post.likes.length} Likes</p>
+                <CommentInput />
                 <CommentList comments={comments}/>
             </div>
         )
