@@ -37,3 +37,18 @@ export const createPost = async (body) => {
         console.log(err);
     }
 }
+
+export const deletePost = async (id) => {
+    try {
+        const response = await fetch('http://localhost:5000/posts/' + id, {
+            method: 'DELETE',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({id})
+        })
+        const data = await response.json();
+        return data; 
+        
+    } catch (err) {
+        console.log(err);
+    }
+}
