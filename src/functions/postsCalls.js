@@ -46,8 +46,7 @@ export const deletePost = async (id) => {
             body: JSON.stringify({id})
         })
         const data = await response.json();
-        return data; 
-        
+        return data;
     } catch (err) {
         console.log(err);
     }

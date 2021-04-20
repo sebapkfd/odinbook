@@ -1,18 +1,16 @@
 import verifySession from '../functions/verifySession';
-import {deletePost} from '../functions/postsCalls';
 
 const Options = (props) => {
-    const {post} = props;
+    const {element, deleteFunction} = props;
 
     const deleteData = async (e) => {
         e.preventDefault();
-        await deletePost(post._id);
-        window.location.reload();
+        deleteFunction();
     }
 
     const userId = (verifySession()) ? JSON.parse(localStorage.getItem('userSession')).user._id : null;
-    const deleteButton = (post.user._id === userId) ? <button onClick={deleteData}>Delete</button>: null;
-    const editButton = (post.user._id === userId) ? <button>Edit</button>: null;
+    const deleteButton = (element.user._id === userId) ? <button onClick={deleteData}>Delete</button>: null;
+    const editButton = (element.user._id === userId) ? <button>Edit</button>: null;
 
     return (
         <div>
