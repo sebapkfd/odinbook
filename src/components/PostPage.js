@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {getPostDetail} from '../functions/postsCalls';
+import CommentList from './CommentList';
 
 const PostPage = () => {
     const [post, setPost] = useState(null);
@@ -9,7 +10,6 @@ const PostPage = () => {
 
     const getData = async () => {
         const {postDetail, postComments} = await getPostDetail(id);
-        console.log(postDetail);
         setPost(postDetail);
         setComments(postComments);
     };
@@ -24,6 +24,7 @@ const PostPage = () => {
                 <p>{post.user.firstName} {post.user.lastName}</p>
                 <h2>{post.text}</h2>
                 <p>{post.likes.length} Likes</p>
+                <CommentList comments={comments}/>
             </div>
         )
     }
