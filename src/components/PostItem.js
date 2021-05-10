@@ -15,7 +15,7 @@ const PostItem = (props) => {
             <Link to={`posts/${post._id}`}>
                 <p>{post.text}</p>
             </Link>
-            <Options element={post} deleteFunction={deleteData}/>
+            <Options element={post} deleteFunction={deleteData} editLink={`posts/edit/${post._id}`}/>
         </div>
     )
 }

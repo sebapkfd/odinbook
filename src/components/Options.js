@@ -1,7 +1,8 @@
 import verifySession from '../functions/verifySession';
+import {Link} from 'react-router-dom';
 
 const Options = (props) => {
-    const {element, deleteFunction} = props;
+    const {element, deleteFunction, editLink} = props;
 
     const deleteData = async (e) => {
         e.preventDefault();
@@ -15,7 +16,9 @@ const Options = (props) => {
     return (
         <div>
             {deleteButton}
-            {editButton}
+            <Link to={editLink}>
+                {editButton}
+            </Link>
         </div>
     )
 }
