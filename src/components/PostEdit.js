@@ -17,7 +17,7 @@ const PostEdit = () => {
         e.preventDefault();
         const body = {text, user: post.user, id}
         await editPost(body)
-        history.push('/');
+        history.push(`/posts/${post._id}`);
     }
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const PostEdit = () => {
         return (
             <div>
                 <form>
-                    <label>Post</label>
+                    <label>Edit Post</label>
                     <textarea
                         name='text'
                         required={true}

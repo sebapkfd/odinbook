@@ -7,6 +7,7 @@ import LogIn from './components/LogIn';
 import Router from './components/Router';
 import PostPage from './components/PostPage';
 import PostEdit from './components/PostEdit';
+import CommentEdit from  './components/CommentEdit';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path={'/login'}>
             <LogIn/>
           </Route>
+          <Router component={<CommentEdit/>} path={'/comments/edit/:id'}/>
           <Router component={<PostEdit/>} path={'/posts/edit/:id'}/>
           <Router component={<PostPage/>} path={'/posts/:id'}/>
           <Router component={<Home/>} path={'/'}/>
