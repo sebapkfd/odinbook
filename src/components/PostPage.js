@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import {getPostDetail} from '../functions/postsCalls';
 import CommentList from './CommentList';
 import CommentInput from './CommentInput';
+import PostItem from './PostItem';
 
 const PostPage = () => {
     const [post, setPost] = useState(null);
@@ -25,6 +26,7 @@ const PostPage = () => {
                 <p>{post.user.firstName} {post.user.lastName}</p>
                 <h2>{post.text}</h2>
                 <p>{post.likes.length} Likes</p>
+                <PostItem post={post} useLink={false}/>
                 <CommentInput/>
                 <CommentList comments={comments}/>
             </div>

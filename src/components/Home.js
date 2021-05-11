@@ -24,6 +24,7 @@ const Home = () => {
                     <PostItem
                     post={post}
                     key={post._id}
+                    useLink={true}
                     />
                 )
             })}
