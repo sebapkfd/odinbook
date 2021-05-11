@@ -27,3 +27,16 @@ export const logIn = async (body) => {
         console.log(err);
     }
 }
+
+export const getUserDetail = async (id) => {
+    try {
+        const response = await fetch('http://localhost:5000/users/'+ id, {
+            method: 'GET',
+            headers: {"Content-Type": "application/json"}
+        })
+        const data = await response.json();
+        return data;
+    } catch (err) {
+        console.log(err);
+    }
+}

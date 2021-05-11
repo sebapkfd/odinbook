@@ -8,6 +8,7 @@ import Router from './components/Router';
 import PostPage from './components/PostPage';
 import PostEdit from './components/PostEdit';
 import CommentEdit from  './components/CommentEdit';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Router component={<CommentEdit/>} path={'/comments/edit/:id'}/>
           <Router component={<PostEdit/>} path={'/posts/edit/:id'}/>
           <Router component={<PostPage/>} path={'/posts/:id'}/>
+          <Router component={<Profile/>} path={'/users/:id'}/>
           <Router component={<Home/>} path={'/'}/>
         </Switch>
       </BrowserRouter>

@@ -4,10 +4,15 @@ import verifySession from '../functions/verifySession';
 
 const Navbar = () => {
 
+    
+    const user = JSON.parse(localStorage.getItem('userSession')).user._id;
     const sessionOpts = (verifySession()) ? (
         <div className='session'>
             <Link to='/'>
                 <button>Home</button>
+            </Link>
+            <Link to={`/users/${user}`}>
+                <button>Profile</button>
             </Link>
             <LogOut/>
         </div>
