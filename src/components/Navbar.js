@@ -4,7 +4,6 @@ import verifySession from '../functions/verifySession';
 
 const Navbar = () => {
 
-    
     const user = JSON.parse(localStorage.getItem('userSession')).user._id;
     const sessionOpts = (verifySession()) ? (
         <div className='session'>
@@ -13,6 +12,9 @@ const Navbar = () => {
             </Link>
             <Link to={`/users/${user}`}>
                 <button>Profile</button>
+            </Link>
+            <Link to={`/users`}>
+                <button>Find friends</button>
             </Link>
             <LogOut/>
         </div>

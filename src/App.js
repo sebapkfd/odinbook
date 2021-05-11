@@ -9,6 +9,7 @@ import PostPage from './components/PostPage';
 import PostEdit from './components/PostEdit';
 import CommentEdit from  './components/CommentEdit';
 import Profile from './components/Profile';
+import UsersPage from './components/UsersPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Router component={<PostEdit/>} path={'/posts/edit/:id'}/>
           <Router component={<PostPage/>} path={'/posts/:id'}/>
           <Router component={<Profile/>} path={'/users/:id'}/>
+          <Router component={<UsersPage/>} path={'/users'}/>
           <Router component={<Home/>} path={'/'}/>
         </Switch>
       </BrowserRouter>
