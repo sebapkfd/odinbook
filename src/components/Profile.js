@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {getUserDetail} from '../functions/userCalls';
-// import PostItem from './PostItem';
+import PostList from './PostList';
 
 const Profile = () => {
     const [user, setUser] = useState(null);
@@ -22,6 +22,7 @@ const Profile = () => {
         return (
             <div>
                 <p>{user.firstName}</p>
+                <PostList posts={posts}/>
             </div>
         )
     }
