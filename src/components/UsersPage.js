@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import {getUserList} from '../functions/userCalls';
+import {getOtherUsersList} from '../functions/userCalls';
 import UserList from './UserList';
 
 const UsersPage = () => {
     const [users, setUsers] = useState(null);
 
     const getData = async () => {
-        const data = await getUserList();
+        const user = JSON.parse(localStorage.getItem('userSession')).user._id;
+        const data = await getOtherUsersList(user);
         setUsers(data);
     }
 

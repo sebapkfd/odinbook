@@ -53,3 +53,16 @@ export const getUserList = async () => {
         console.log(err);
     }
 }
+
+export const getOtherUsersList = async (id) => {
+    try {
+        const response = await fetch('http://localhost:5000/users/others/' + id, {
+            method: 'GET',
+            headers: {"Content-Type": "application/json"}
+        })
+        const data = await response.json();
+        return data;
+    } catch (err) {
+        console.log(err);
+    }
+}
