@@ -1,16 +1,24 @@
 import {Link} from 'react-router-dom';
-import {sendFriendRequest} from '../functions/userCalls';
+import {sendFriendRequest, cancelFriendRequest} from '../functions/userCalls';
 
 const UserItem = (props) => {
     const {user} = props;
     const sender = JSON.parse(localStorage.getItem('userSession')).user._id;
     const receiver = user._id;
 
-    const sendData = async () => {
+    const sendRequest = async () => {
         await sendFriendRequest({sender, receiver});
     }
 
-    const addFriendButton = (user.friendRequests.includes(sender)) ? null :  <button onClick={sendData}>Add Friend</button> ;
+    const cancelRequest = async () => {
+        await cancelFriendRequest({sender, receiver});
+    }
+
+    const addFriendButton = (user.friendRequests.includes(sender)) ? (
+        <button onClick={cancelRequest}>Cancel Request</button>
+        ) : (
+        <button onClick={sendRequest}>Add Friend</button>
+        );
 
     return  (
         <div>
