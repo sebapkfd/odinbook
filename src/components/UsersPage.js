@@ -8,6 +8,7 @@ const UsersPage = () => {
     const getData = async () => {
         const user = JSON.parse(localStorage.getItem('userSession')).user._id;
         const data = await getOtherUsersList(user);
+        console.log(data);
         setUsers(data);
     }
 
