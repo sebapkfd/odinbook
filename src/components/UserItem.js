@@ -1,5 +1,7 @@
 import {Link} from 'react-router-dom';
 import AddFriend from './AddFriend';
+import DeleteFriend from './DeleteFriend';
+import RequestOptions from './RequestOptions';
 
 const UserItem = (props) => {
     const {user, option} = props;
@@ -9,10 +11,10 @@ const UserItem = (props) => {
         friendOptions = <AddFriend user={user}/>;
     }
     else if (option === 'Friends') {
-        friendOptions = <button>Delete Friend</button>
+        friendOptions = <DeleteFriend user={user}/>
     }
-    else {
-        console.log('Requests');
+    else if(option === 'Requests'){
+        friendOptions = <RequestOptions />
     }
 
     return  (
