@@ -18,7 +18,7 @@ const UsersPage = () => {
     if (users) {
         return (
             <div>
-                <UserList users={users}/>
+                <UserList users={users} option={'NotFriends'}/>
             </div>
         )
     }

@@ -1,12 +1,14 @@
 import UserItem from './UserItem';
 
 const UserList = (props) => {
-    const {users} = props;
+    const {users, option} = props;
+
+
     if (users.length > 0) {
         return (
             <div>
                 {users.map(user => {
-                    return <UserItem key={user._id} user={user}/>
+                    return <UserItem key={`option/${user._id}`} user={user} option={option}/>
                 })}
             </div>
         )
