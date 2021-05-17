@@ -14,7 +14,7 @@ const UserItem = (props) => {
         friendOptions = <DeleteFriend user={user}/>
     }
     else if(option === 'Requests'){
-        friendOptions = <RequestOptions />
+        friendOptions = <RequestOptions user={user}/>
     }
 
     return  (

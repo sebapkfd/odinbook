@@ -94,3 +94,28 @@ export const cancelFriendRequest = async (body) => {
         console.log(err);
     }
 }
+
+export const answerRequest = async (value, body) => {
+    try {
+        if (value) {
+            const response = await fetch('http://localhost:5000/users/requests', {
+                method: 'PUT',
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(body)
+            })
+            const data = await response.json();
+            return data;
+        }
+        else {
+            const response = await fetch('http://localhost:5000/users/others', {
+            method: 'PUT',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(body)
+        })
+        const data = await response.json();
+        return data;
+        }
+    } catch (err) {
+        console.log(err);
+    }
+}
