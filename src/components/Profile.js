@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {getUserDetail} from '../functions/userCalls';
 import PostList from './PostList';
+import UserList from './UserList';
 
 const Profile = () => {
     const [user, setUser] = useState(null);
     const [posts, setPosts] = useState([]);
-    const [content, setContent] = useState(0)
+    const [content, setContent] = useState('posts')
     const {id} = useParams();
 
     const getData = async () => {
@@ -16,7 +17,12 @@ const Profile = () => {
     }
 
     const changeContent = (value) => {
-        setContent(value)
+        const contentType = {
+            'posts' : <PostList posts={posts}/>,
+            'friends': <UserList users={user.friendList}/>,
+            'requests': <UserList users={user.friendRequests}/>
+        }
+        setContent(contentType[value]);
     }
 
     useEffect(() => {
@@ -27,13 +33,12 @@ const Profile = () => {
         return (
             <div>
                 <p>{user.firstName}</p>
-                {content}
                 <div>
-                    <button onClick={e => changeContent(0)}>Post</button>
-                    <button onClick={e => changeContent(1)}>Friends</button>
-                    <button onClick={e => changeContent(2)}>Friend Requests</button>
+                    <button onClick={e => changeContent('posts')}>Post</button>
+                    <button onClick={e => changeContent('friends')}>Friends</button>
+                    <button onClick={e => changeContent('requests')}>Friend Requests</button>
                 </div>
-                <PostList posts={posts}/>
+                {content}
             </div>
         )
     }
