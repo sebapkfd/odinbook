@@ -65,3 +65,17 @@ export const editPost = async (body) => {
         console.log(err);
     }
 }
+
+export const likePost = async (body) => {
+    try {
+        const response = await fetch('http://localhost:5000/posts/' + body.id + '/like', {
+            method: 'PUT',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(body)
+        })
+        const data = await response.json();
+        return data; 
+    } catch (err) {
+        console.log(err);
+    }
+}
