@@ -19,7 +19,7 @@ const UserItem = (props) => {
 
     return  (
         <div>
-            <Link to ={`users/${user._id}`}>
+            <Link to ={`/users/${user._id}`}>
                 <p>{user.firstName}</p>
             </Link>
             {friendOptions}

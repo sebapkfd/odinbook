@@ -20,14 +20,13 @@ const PostItem = (props) => {
     }
 
     const title = (useLink) ? (
-        <Link to={`posts/${post._id}`}>
+        <Link to={`/posts/${post._id}`}>
             <p>{post.text}</p>
         </Link>
     ) : (
         <p>{post.text}</p>
     );
 
-    //this is an user object
     const likeStatus = (likes.includes(user)) ? 'Liked' : 'Like';
 
     return (
@@ -37,7 +36,7 @@ const PostItem = (props) => {
                 element={post}
                 deleteFunction={deleteData}
                 likeFunction = {submitLike}
-                editLink={`posts/edit/${post._id}`}
+                editLink={`/posts/edit/${post._id}`}
                 initialLikeStatus={likeStatus}
                 />
         </div>

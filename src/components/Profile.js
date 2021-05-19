@@ -7,7 +7,7 @@ import UserList from './UserList';
 const Profile = () => {
     const [user, setUser] = useState(null);
     const [posts, setPosts] = useState([]);
-    const [content, setContent] = useState('posts')
+    const [content, setContent] = useState('')
     const {id} = useParams();
 
     const getData = async () => {
