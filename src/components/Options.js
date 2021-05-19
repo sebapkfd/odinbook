@@ -14,7 +14,7 @@ const Options = (props) => {
     const submitLike = async (e) => {
         e.preventDefault();
         const {msg} = await likeFunction();
-        (msg === "Post liked") ? setLike('Liked') : setLike('Like');
+        (msg === 'Like added') ? setLike('Liked') : setLike('Like');
     }
 
     const userId = (verifySession()) ? JSON.parse(localStorage.getItem('userSession')).user._id : null;

@@ -14,7 +14,7 @@ const PostItem = (props) => {
 
     const submitLike = async () => {
         const result = await likePost({user, id: post._id});
-        return result
+        return result;
     }
 
     const title = (useLink) ? (
@@ -33,7 +33,7 @@ const PostItem = (props) => {
             <Options
                 element={post}
                 deleteFunction={deleteData}
-                likeFunction = {submitLike}
+                likeFunction={submitLike}
                 editLink={`/posts/edit/${post._id}`}
                 initialLikeStatus={likeStatus}
                 />
