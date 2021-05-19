@@ -19,7 +19,7 @@ const Home = () => {
         <div>
             <h1>Home</h1>
             <PostInput/>
-            <PostList posts={postList}/>
+            <PostList posts={postList} source={'home'}/>
         </div>
     )
 }

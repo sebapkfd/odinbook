@@ -3,9 +3,9 @@ import Options from './Options';
 import {deletePost, likePost} from '../functions/postsCalls';
 
 const PostItem = (props) => {
-    const {post, useLink} = props;
+    const {post, useLink, source} = props;
     const user = JSON.parse(localStorage.getItem('userSession')).user._id;
-    const likes = post.likes.map(like => like._id);
+    const likes = (source === 'home') ? post.likes.map(like => like._id) : post.likes;
 
     const deleteData = async () => {
         await deletePost(post._id);
@@ -14,9 +14,7 @@ const PostItem = (props) => {
 
     const submitLike = async () => {
         const result = await likePost({user, id: post._id});
-        console.log(result);
         return result
-        // window.location.reload();
     }
 
     const title = (useLink) ? (
