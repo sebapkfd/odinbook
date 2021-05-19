@@ -15,7 +15,7 @@ const CommentEdit = () => {
 
     const submitData = async (e) => {
         e.preventDefault();
-        const body = {id, text, user: comment.user, post: comment.post};
+        const body = {id, text, user: comment.user, post: comment.post, likes: comment.likes};
         await editComment(body);
         history.push(`/posts/${comment.post}`);
     }
