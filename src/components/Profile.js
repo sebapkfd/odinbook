@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import {getUserDetail} from '../functions/userCalls';
 import PostList from './PostList';
 import UserList from './UserList';
+import verifySession from '../functions/verifySession';
 
 const Profile = () => {
     const [user, setUser] = useState(null);
@@ -30,13 +31,17 @@ const Profile = () => {
     }, [])
 
     if (user) {
+        const userId = (verifySession()) ? JSON.parse(localStorage.getItem('userSession')).user._id : null;
+        const friendRequestButton = (userId === user._id) ? (
+            <button onClick={e => changeContent('requests')}>Friend Requests</button>
+        ) : (null);
         return (
             <div>
                 <p>{user.firstName}</p>
                 <div>
                     <button onClick={e => changeContent('posts')}>Post</button>
                     <button onClick={e => changeContent('friends')}>Friends</button>
-                    <button onClick={e => changeContent('requests')}>Friend Requests</button>
+                    {friendRequestButton}
                 </div>
                 {content}
             </div>
