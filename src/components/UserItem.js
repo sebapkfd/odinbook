@@ -1,4 +1,4 @@
-import {Link, useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import AddFriend from './AddFriend';
 import DeleteFriend from './DeleteFriend';
 import RequestOptions from './RequestOptions';

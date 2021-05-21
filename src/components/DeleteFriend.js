@@ -2,7 +2,6 @@ import {removeFriend} from '../functions/userCalls';
 
 const DeleteFriend = (props) => {
     const {user} = props;
-    console.log(user);
     const sender = JSON.parse(localStorage.getItem('userSession')).user._id;
     const friend = user._id;
 
