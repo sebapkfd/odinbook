@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import AddFriend from './AddFriend';
 import DeleteFriend from './DeleteFriend';
 import RequestOptions from './RequestOptions';
@@ -6,6 +6,12 @@ import RequestOptions from './RequestOptions';
 const UserItem = (props) => {
     const {user, option} = props;
     let friendOptions = null;
+    let history = useHistory();
+
+    const redirectPage = (path) => {
+        history.push(path);
+        window.location.reload();
+    }
 
     if (option === 'NotFriends') {
         friendOptions = <AddFriend user={user}/>;
@@ -17,11 +23,11 @@ const UserItem = (props) => {
         friendOptions = <RequestOptions user={user}/>
     }
 
+    const userName = <button onClick={() => redirectPage(`/users/${user._id}`)}>{user.firstName}</button>;
+
     return  (
         <div>
-            <Link to ={`/users/${user._id}`}>
-                <p>{user.firstName}</p>
-            </Link>
+            {userName}
             {friendOptions}
         </div>
     )   
