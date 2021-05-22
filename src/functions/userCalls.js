@@ -32,7 +32,10 @@ export const getUserDetail = async (id) => {
     try {
         const response = await fetch('http://localhost:5000/users/'+ id, {
             method: 'GET',
-            headers: {"Content-Type": "application/json"}
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            }
         })
         const data = await response.json();
         return data;
@@ -45,7 +48,10 @@ export const getUserList = async () => {
     try {
         const response = await fetch('http://localhost:5000/users/', {
             method: 'GET',
-            headers: {"Content-Type": "application/json"}
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            }
         })
         const data = await response.json();
         return data;
@@ -58,7 +64,10 @@ export const getOtherUsersList = async (id) => {
     try {
         const response = await fetch('http://localhost:5000/users/others/' + id, {
             method: 'GET',
-            headers: {"Content-Type": "application/json"}
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            }
         })
         const data = await response.json();
         return data;
@@ -71,7 +80,10 @@ export const sendFriendRequest = async (body) => {
     try {
         const response = await fetch('http://localhost:5000/users/others', {
             method: 'POST',
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            },
             body: JSON.stringify(body)
         })
         const data = await response.json();
@@ -85,7 +97,10 @@ export const cancelFriendRequest = async (body) => {
     try {
         const response = await fetch('http://localhost:5000/users/others', {
             method: 'PUT',
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            },
             body: JSON.stringify(body)
         })
         const data = await response.json();
@@ -100,7 +115,10 @@ export const answerRequest = async (value, body) => {
         if (value) {
             const response = await fetch('http://localhost:5000/users/requests', {
                 method: 'PUT',
-                headers: {"Content-Type": "application/json"},
+                headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+                },
                 body: JSON.stringify(body)
             })
             const data = await response.json();
@@ -109,7 +127,10 @@ export const answerRequest = async (value, body) => {
         else {
             const response = await fetch('http://localhost:5000/users/others', {
             method: 'PUT',
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            },
             body: JSON.stringify(body)
         })
         const data = await response.json();
@@ -123,12 +144,15 @@ export const answerRequest = async (value, body) => {
 export const removeFriend = async (body) => {
     try {
         const response = await fetch('http://localhost:5000/users/friends', {
-                method: 'PUT',
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(body)
-            })
-            const data = await response.json();
-            return data;
+            method: 'PUT',
+            headers: {
+            "Content-Type": "application/json", 
+            "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            },
+            body: JSON.stringify(body)
+        })
+        const data = await response.json();
+        return data;
     } catch (err) {
         console.log(err);
     }
