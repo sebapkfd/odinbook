@@ -52,3 +52,17 @@ p {
   border: none;
   color: white;
 }
+
+.open-session {
+  display: flex;
+  justify-content: space-between;
+}
+
+.open-session__links {
+  display: flex;
+}
+
+.close-session {
+  display: flex;
+  justify-content: flex-end;
+}

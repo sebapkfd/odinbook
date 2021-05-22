@@ -14,23 +14,16 @@ const Navbar = () => {
     }
 
     const sessionOpts = (verifySession()) ? (
-        <div className='session'>
+        <div className='open-session'>
             <button onClick={() => redirectPage('/')}>Home</button>
-            <button onClick={() => redirectPage(`/users/${user}`)}>Profile</button>
-            <button onClick={() => redirectPage(`/users`)}>Find friends</button>
-            {/* <Link to='/'>
-                
-            </Link>
-            <Link to={`/users/${user}`}>
-                
-            </Link>
-            <Link to={`/users`}>
-                <button>Find friends</button>
-            </Link> */}
-            <LogOut/>
+            <div className={'open-session__links'}>
+                <button onClick={() => redirectPage(`/users/${user}`)}>Profile</button>
+                <button onClick={() => redirectPage(`/users`)}>Find friends</button>
+                <LogOut/>
+            </div>
         </div>
     ):(
-        <div className='session'>
+        <div className='close-session'>
             <Link to='/signup'>
                 <button>Sign Up</button>
             </Link>
