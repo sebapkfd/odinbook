@@ -8,7 +8,10 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-.log-in, .sign-up, .comment-edit, .post-edit {
+.log-in,
+.sign-up,
+.comment-edit, 
+.post-edit {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -16,7 +19,8 @@ body {
   margin-top: 25px;
 }
 
-.log-in form, .sign-up form, .comment-edit form, .post-edit form{
+.log-in form, 
+.sign-up form {
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -67,7 +71,31 @@ p {
   justify-content: flex-end;
 }
 
-/* .comment-edit, .post-edit {
-  background-color: red;
-  display;
-} */
+.post-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-page h2 {
+  color: white;
+}
+
+.comment-input, .post-input {
+  margin-top: 15px;
+}
+
+.comment-input form,
+.post-input form,
+.comment-edit form, 
+.post-edit form{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.comment-input form button,
+.post-input form button {
+  margin-top: 10px;
+}

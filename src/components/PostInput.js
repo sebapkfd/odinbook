@@ -13,7 +13,7 @@ const PostInput = () => {
     }
 
     return (
-        <div>
+        <div className={'post-input'}>
             <form onSubmit={submitData}>
                 <textarea
                     name='text'

@@ -15,7 +15,7 @@ const CommentInput = () => {
     }
 
     return (
-        <div>
+        <div className={'comment-input'}>
             <form onSubmit={submitData}>
                 <textarea
                     name='text'

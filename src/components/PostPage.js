@@ -22,7 +22,7 @@ const PostPage = () => {
 
     if(post) {
         return (
-            <div>
+            <div className={'post-page'}>
                 <p>{post.user.firstName} {post.user.lastName}</p>
                 <h2>{post.text}</h2>
                 <p>{post.likes.length} Likes</p>
