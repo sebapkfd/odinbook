@@ -26,7 +26,7 @@ const CommentEdit = () => {
 
     if(comment) { 
         return (
-            <div>
+            <div className={'comment-edit'}>
                 <form>
                     <label>Edit Comment</label>
                     <textarea

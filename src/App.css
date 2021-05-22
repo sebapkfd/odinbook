@@ -8,7 +8,7 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-.log-in, .sign-up {
+.log-in, .sign-up, .comment-edit, .post-edit {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -16,7 +16,7 @@ body {
   margin-top: 25px;
 }
 
-.log-in form, .sign-up form{
+.log-in form, .sign-up form, .comment-edit form, .post-edit form{
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -66,3 +66,8 @@ p {
   display: flex;
   justify-content: flex-end;
 }
+
+/* .comment-edit, .post-edit {
+  background-color: red;
+  display;
+} */
