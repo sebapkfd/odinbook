@@ -2,7 +2,10 @@ export const getPostList = async () => {
     try {
         const response = await fetch('http://localhost:5000/posts', {
             method: 'GET',
-            headers: {"Content-Type": "application/json"}
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            }
         })
         const data = await response.json();
         return data;   
@@ -15,7 +18,10 @@ export const getPostDetail = async (id) => {
     try {
         const response = await fetch('http://localhost:5000/posts/'+ id, {
             method: 'GET',
-            headers: {"Content-Type": "application/json"}
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            }
         })
         const data = await response.json();
         return data;
@@ -28,7 +34,10 @@ export const createPost = async (body) => {
     try {
         const response = await fetch('http://localhost:5000/posts', {
             method: 'POST',
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            },
             body: JSON.stringify(body)
         })
         const data = await response.json();
@@ -42,7 +51,10 @@ export const deletePost = async (id) => {
     try {
         const response = await fetch('http://localhost:5000/posts/' + id, {
             method: 'DELETE',
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            },
             body: JSON.stringify({id})
         })
         const data = await response.json();
@@ -56,7 +68,10 @@ export const editPost = async (body) => {
     try {
         const response = await fetch('http://localhost:5000/posts/' + body.id, {
             method: 'PUT',
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            },
             body: JSON.stringify(body)
         })
         const data = await response.json();
@@ -70,7 +85,10 @@ export const likePost = async (body) => {
     try {
         const response = await fetch('http://localhost:5000/posts/' + body.id + '/like', {
             method: 'PUT',
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem('userSession')).token
+            },
             body: JSON.stringify(body)
         })
         const data = await response.json();
