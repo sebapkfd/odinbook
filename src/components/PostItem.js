@@ -28,7 +28,7 @@ const PostItem = (props) => {
     const likeStatus = (likes.includes(user)) ? 'Liked' : 'Like';
 
     return (
-        <div>
+        <div className={'post-item'}>
             {title}
             <Options
                 element={post}

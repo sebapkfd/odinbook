@@ -5,10 +5,10 @@
 body {
   margin: 0;
   background-color: rgb(64, 64, 92);
+  font-family: Verdana, sans-serif;
 }
 
-.log-in {
-  /* background-color: red; */
+.log-in, .sign-up {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -16,11 +16,33 @@ body {
   margin-top: 25px;
 }
 
-.log-in form{
+.log-in form, .sign-up form{
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 50vh;
   width: 50vw;
+}
+
+.home {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.post-item {
+  border: white solid 1px;
+  border-radius: 15px;
+  margin-top: 15px;
+  width: 60%;
 }
