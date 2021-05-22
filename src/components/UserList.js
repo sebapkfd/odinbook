@@ -6,7 +6,7 @@ const UserList = (props) => {
 
     if (users.length > 0) {
         return (
-            <div>
+            <div className={'user-list'}>
                 {users.map(user => {
                     return <UserItem key={`option/${user._id}`} user={user} option={option}/>
                 })}

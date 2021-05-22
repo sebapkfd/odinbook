@@ -33,16 +33,22 @@ p {
   color: white;
 }
 
-.post-list {
+.post-list, .user-list {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
 }
 
-.post-item {
+.post-item, .user-item {
   border: white solid 1px;
   border-radius: 15px;
   margin-top: 15px;
   width: 60%;
+}
+
+.user-name {
+  background-color: rgba(64, 64, 92, 0);
+  border: none;
+  color: white;
 }
