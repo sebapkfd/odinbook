@@ -67,14 +67,15 @@ p {
 .open-session, .close-session {
   background-color: rgb(14, 14, 14);
   border-bottom: rgb(50, 50, 50) solid 1px;
-  height: 2em;
+  height: 2.2em;
 }
 
 #log-out-container button {
   height: 100%;
 }
 
-.open-session button {
+.open-session button,
+.close-session button {
   background-color: rgb(14, 14, 14);
   color: white;
   border: none;
@@ -82,7 +83,8 @@ p {
   font-size: 0.9em;
 }
 
-.open-session button:hover {
+.open-session button:hover,
+.close-session a button:hover {
   background-color: rgb(50, 50, 50);
 }
 
@@ -90,14 +92,19 @@ p {
   display: flex;
 }
 
-.open-session__links button {
-  margin-right: 10px;
-}
-
-
 .close-session {
   display: flex;
   justify-content: flex-end;
+  padding: 0 30px;
+}
+
+.close-session button {
+  height: 100%;
+  margin-right: 10px;
+}
+
+.open-session__links button {
+  margin-right: 10px;
 }
 
 .post-page {
