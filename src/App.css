@@ -61,11 +61,39 @@ p {
 .open-session {
   display: flex;
   justify-content: space-between;
+  padding: 0 30px;
+}
+
+.open-session, .close-session {
+  background-color: rgb(14, 14, 14);
+  border-bottom: rgb(50, 50, 50) solid 1px;
+  height: 2em;
+}
+
+#log-out-container button {
+  height: 100%;
+}
+
+.open-session button {
+  background-color: rgb(14, 14, 14);
+  color: white;
+  border: none;
+  transition-duration: 0.2s;
+  font-size: 0.9em;
+}
+
+.open-session button:hover {
+  background-color: rgb(50, 50, 50);
 }
 
 .open-session__links {
   display: flex;
 }
+
+.open-session__links button {
+  margin-right: 10px;
+}
+
 
 .close-session {
   display: flex;
@@ -103,4 +131,8 @@ p {
 
 a {
   text-decoration: none;
+}
+
+p {
+  word-break: break-all;
 }

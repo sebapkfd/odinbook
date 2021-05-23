@@ -24,9 +24,8 @@ const PostPage = () => {
         return (
             <div className={'post-page'}>
                 <p>{post.user.firstName} {post.user.lastName}</p>
-                <h2>{post.text}</h2>
-                <p>{post.likes.length} Likes</p>
                 <PostItem post={post} useLink={false} source={'postpage'}/>
+                <p>{post.likes.length} Likes</p>
                 <CommentInput/>
                 <CommentList comments={comments}/>
             </div>

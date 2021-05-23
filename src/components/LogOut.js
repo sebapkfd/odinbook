@@ -14,7 +14,7 @@ const LogOut = () => {
     const LogOutButton = (verifySession()) ? <button onClick={clearData}>Log Out</button> : null;
 
     return (
-        <div>{LogOutButton}</div>
+        <div id={'log-out-container'}>{LogOutButton}</div>
     )
 }
 
