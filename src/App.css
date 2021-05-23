@@ -143,3 +143,37 @@ a {
 p {
   word-break: break-all;
 }
+
+.log-in form,
+.sign-up form {
+  color: white;
+  background-color: rgb(14, 14, 14);
+  border: rgb(50, 50, 50) solid 1px;
+  width: 35vw;
+  padding: 1em 0;
+  border-radius: 25px;
+  height: auto;
+}
+
+.log-in form input,
+.sign-up form input {
+  width: 80%;
+  margin: 1em 0;
+  height: 2em;
+  color: white;
+  background-color: rgb(14, 14, 14);
+  border: rgb(50, 50, 50) solid 2px;
+}
+::-ms-reveal {
+  filter: invert(100%);
+}
+
+.log-in form button,
+.sign-up form button {
+  border: rgb(56, 49, 158) solid 2px;
+  background-color: rgb(56, 49, 158);
+  color: white;
+  width: 80%;
+  height: 2rem;
+  margin: 1em 0;
+}
