@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(64, 64, 92);
+  background-color: rgb(0, 0, 0);
   font-family: Verdana, sans-serif;
 }
 
@@ -45,7 +45,8 @@ p {
 }
 
 .post-item, .user-item {
-  border: white solid 1px;
+  background-color: rgb(14, 14, 14);
+  border: rgb(50, 50, 50) solid 1px;
   border-radius: 15px;
   margin-top: 15px;
   width: 60%;
@@ -98,4 +99,8 @@ p {
 .comment-input form button,
 .post-input form button {
   margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
 }

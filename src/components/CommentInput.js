@@ -9,7 +9,7 @@ const CommentInput = () => {
     const submitData = async (e) => {
         e.preventDefault();
         const user = JSON.parse(localStorage.getItem('userSession')).user._id;
-        const body = {post: id, text, user}
+        const body = {post: id, text, user};
         await createComment(body);
         window.location.reload();
     }

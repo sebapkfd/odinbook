@@ -15,8 +15,8 @@ const PostEdit = () => {
 
     const submitData = async (e) => {
         e.preventDefault();
-        const body = {id, text, user: post.user, likes: post.likes}
-        await editPost(body)
+        const body = {id, text, user: post.user, likes: post.likes};
+        await editPost(body);
         history.push(`/posts/${post._id}`);
     }
 

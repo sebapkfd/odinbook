@@ -7,7 +7,7 @@ const PostInput = () => {
     const submitData = async (e) => {
         e.preventDefault();
         const user = JSON.parse(localStorage.getItem('userSession')).user._id;
-        const body = {user, text: post}
+        const body = {user, text: post};
         await createPost(body);
         window.location.reload();
     }
