@@ -25,7 +25,7 @@ const CommentInput = () => {
                     maxLength={200}
                     onChange={e => setText(e.target.value)}
                 />
-                <button>Post Comment</button>
+                <button>Reply</button>
             </form>
         </div>
     )

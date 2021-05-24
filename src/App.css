@@ -155,11 +155,6 @@ button:hover,
   align-items: center;
 }
 
-.comment-input form button,
-.post-input form button {
-  margin-top: 10px;
-}
-
 a {
   text-decoration: none;
 }
@@ -215,6 +210,7 @@ p {
   display: flex;
   flex-direction: row;
   padding-left: 15px;
+  margin-bottom: 9.6px;
 }
 .options button {
   margin: 0 5px 3px 0;
@@ -223,4 +219,37 @@ p {
 
 .Liked {
   color: rgb(84, 77, 192);
+}
+
+.post-input form textarea,
+.post-edit form textarea,
+.comment-input form textarea,
+.comment-edit form textarea {
+  width: 35vw;
+  height: 12vh;
+  background-color: rgb(51, 51, 51);
+  outline: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.post-input form button,
+.post-edit form button,
+.comment-input form button,
+.comment-edit form button {
+  width: 10vw;
+  background-color: rgb(51, 51, 51);
+  outline: none;
+  color: white;
+  font-size: 1.2em;
+  margin-top: 10px;
+  transition-duration: 0.2s;
+}
+
+.post-input form button:hover,
+.post-edit form button:hover,
+.comment-input form button:hover,
+.comment-edit form button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
