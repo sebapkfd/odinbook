@@ -20,7 +20,7 @@ const AddFriend = (props) => {
     );
 
     return (
-        <div>{addFriendButton}</div>
+        <div className={'add-friend'}>{addFriendButton}</div>
     )
 
 }

@@ -23,9 +23,7 @@ const UserItem = (props) => {
         friendOptions = <RequestOptions user={user}/>
     }
 
-    const userName = <button 
-                    onClick={() => redirectPage(`/users/${user._id}`)} 
-                    className={'user-name'}>
+    const userName = <button onClick={() => redirectPage(`/users/${user._id}`)} className={'user-name-button'}>
                         {user.firstName}
                     </button>;
 

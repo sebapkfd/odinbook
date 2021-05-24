@@ -19,7 +19,7 @@ const SignUp = () => {
 
     return (
         <div className='sign-up'>
-        <h1>Log in Odinbook</h1>
+        <h1>Sign Up on Odinbook</h1>
             <form onSubmit={submitData}>
                 <label>First Name</label>
                 <input

@@ -16,7 +16,7 @@ const DeleteFriend = (props) => {
     );
     
     return (
-        <div>
+        <div className={'delete-friend'}>
             {deleteButton}
         </div>
     )

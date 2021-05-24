@@ -11,8 +11,8 @@ const RequestOptions = (props) => {
 
     return (
         <div>
-            <button onClick={() => submitData(true)}>Acept</button>
-            <button onClick={() => submitData(false)}>Reject</button>
+            <button onClick={() => submitData(true)} className={'accept-friend'}>Accept</button>
+            <button onClick={() => submitData(false)} className={'reject-friend'}>Reject</button>
         </div>
     )
 }
