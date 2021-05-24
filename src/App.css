@@ -303,3 +303,9 @@ p {
   margin: 5px;
   border: none;
 }
+
+.post-list,
+.user-list,
+.comment-list {
+  margin-bottom: 10px;
+}
