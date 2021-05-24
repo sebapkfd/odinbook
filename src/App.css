@@ -33,23 +33,26 @@ body {
   color: white;
 }
 
-p {
-  color: white;
-}
-
-.post-list, .user-list {
+.post-list,
+.user-list {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
 }
 
-.post-item, .user-item {
+.post-item,
+.user-item {
   background-color: rgb(14, 14, 14);
   border: rgb(50, 50, 50) solid 1px;
-  border-radius: 15px;
+  border-radius: 5px;
   margin-top: 15px;
-  width: 60%;
+  width: 35vw;
+}
+
+.post-item__text {
+  /* padding: 0 15px; */
+  align-content: flex-start;
 }
 
 .user-name {
@@ -64,7 +67,8 @@ p {
   padding: 0 30px;
 }
 
-.open-session, .close-session {
+.open-session,
+.close-session {
   background-color: rgb(14, 14, 14);
   border-bottom: rgb(50, 50, 50) solid 1px;
   height: 2.2em;
@@ -142,6 +146,9 @@ a {
 
 p {
   word-break: break-all;
+  text-align: left;
+  color: white;
+  padding-left: 15px;
 }
 
 .log-in h1,

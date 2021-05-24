@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom';
 import { useState } from 'react';
 
 const Options = (props) => {
-    const {element, deleteFunction, likeFunction, editLink, initialLikeStatus} = props;
+    const {element, deleteFunction, likeFunction, editLink, initialLikeStatus, likes} = props;
     const [like, setLike] = useState(initialLikeStatus);
+    const [likeCounter, setLikeCounter] = useState(likes.length);
     
     const deleteData = async (e) => {
         e.preventDefault();
@@ -14,7 +15,14 @@ const Options = (props) => {
     const submitLike = async (e) => {
         e.preventDefault();
         const {msg} = await likeFunction();
-        (msg === 'Like added') ? setLike('Liked') : setLike('Like');
+        if (msg === 'Like added') {
+            setLike('Liked');
+            setLikeCounter(likeCounter + 1);
+        }
+        else {
+            setLike('Like');
+            setLikeCounter(likeCounter - 1)
+        }
     }
 
     const userId = (verifySession()) ? JSON.parse(localStorage.getItem('userSession')).user._id : null;
@@ -24,11 +32,12 @@ const Options = (props) => {
 
     return (
         <div>
+            <p>{likeCounter}</p>
+            {likeButton}
             {deleteButton}
             <Link to={editLink}>
                 {editButton}
             </Link>
-            {likeButton}
         </div>
     )
 }

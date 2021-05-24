@@ -22,13 +22,13 @@ const CommentItem = (props) => {
         <div>
             <p>{comment.text}</p>
             <p>{comment.user.firstName} {comment.user.lastName}</p>
-            <p>{comment.likes.length}</p>
             <Options
                 element={comment}
                 deleteFunction={deleteData}
                 likeFunction={submitLike}
                 editLink={`/comments/edit/${comment._id}`}
                 initialLikeStatus={likeStatus}
+                likes={likes}
             />
         </div>
     )
