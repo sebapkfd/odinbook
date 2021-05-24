@@ -168,6 +168,7 @@ p {
   color: white;
   background-color: rgb(14, 14, 14);
   border: rgb(50, 50, 50) solid 2px;
+  padding-left: 10px;
 }
 ::-ms-reveal {
   filter: invert(100%);
