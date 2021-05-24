@@ -25,7 +25,6 @@ const PostPage = () => {
             <div className={'post-page'}>
                 <p>{post.user.firstName} {post.user.lastName}</p>
                 <PostItem post={post} useLink={false}/>
-                <p>{post.likes.length} Likes</p>
                 <CommentInput/>
                 <CommentList comments={comments}/>
             </div>
