@@ -258,3 +258,7 @@ p {
 .comment-edit h1 {
   color: white;
 }
+
+.edit-form__buttons {
+  margin: 0 5px;
+}

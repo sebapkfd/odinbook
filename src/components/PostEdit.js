@@ -20,6 +20,11 @@ const PostEdit = () => {
         history.push(`/posts/${post._id}`);
     }
 
+    const cancelEdit = (e) => {
+        e.preventDefault();
+        history.goBack();
+    }
+
     useEffect(() => {
         getData(); // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
@@ -36,7 +41,10 @@ const PostEdit = () => {
                         defaultValue={post.text}
                         onChange={e => setText(e.target.value)}
                     />
-                    <button onClick={submitData}>Save</button>
+                    <div>
+                        <button onClick={cancelEdit} className={'edit-form__buttons'}>Cancel</button>
+                        <button onClick={submitData} className={'edit-form__buttons'}>Save</button>
+                    </div>
                 </form>
             </div>
         )
