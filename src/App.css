@@ -42,7 +42,8 @@ body {
 }
 
 .post-item,
-.user-item {
+.user-item,
+.comment-item {
   background-color: rgb(14, 14, 14);
   border: rgb(50, 50, 50) solid 1px;
   border-radius: 5px;
@@ -51,7 +52,6 @@ body {
 }
 
 .post-item__text {
-  /* padding: 0 15px; */
   align-content: flex-start;
 }
 

@@ -19,7 +19,7 @@ const CommentItem = (props) => {
     const likeStatus = (likes.includes(user)) ? 'Liked' : 'Like';
 
     return (
-        <div>
+        <div className={'comment-item'}>
             <p>{comment.text}</p>
             <p>{comment.user.firstName} {comment.user.lastName}</p>
             <Options
