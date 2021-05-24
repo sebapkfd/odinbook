@@ -19,7 +19,7 @@ const Profile = () => {
 
     const changeContent = (value) => {
         const contentType = {
-            'posts' : <PostList posts={posts} source={'profile'}/>,
+            'posts' : <PostList posts={posts}/>,
             'friends': <UserList users={user.friendList} option={'Friends'}/>,
             'requests': <UserList users={user.friendRequests} option={'Requests'}/>
         }

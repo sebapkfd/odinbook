@@ -4,7 +4,7 @@ import {deleteComment, likeComment} from '../functions/commentsCalls';
 const CommentItem = (props) => {
     const {comment} = props;
     const user = JSON.parse(localStorage.getItem('userSession')).user._id;
-    const likes = comment.likes.map(like => like._id);
+    const {likes} = comment;
 
     const deleteData = async () => {
         await deleteComment(comment._id);
