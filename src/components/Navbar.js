@@ -1,4 +1,3 @@
-import {Link} from 'react-router-dom';
 import LogOut from './LogOut';
 import verifySession from '../functions/verifySession';
 import { useHistory } from 'react-router-dom';
