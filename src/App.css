@@ -262,3 +262,12 @@ p {
 .edit-form__buttons {
   margin: 0 5px;
 }
+
+.user-name {
+  text-align: center;
+}
+
+.profile__content button  {
+  margin: 0 5px;
+  height: 2em;
+}

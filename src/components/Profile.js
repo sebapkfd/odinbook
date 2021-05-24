@@ -35,10 +35,11 @@ const Profile = () => {
         const friendRequestButton = (userId === user._id) ? (
             <button onClick={e => changeContent('requests')}>Friend Requests</button>
         ) : (null);
+
         return (
-            <div>
-                <p>{user.firstName}</p>
-                <div>
+            <div className={'profile'}>
+                <h1 className={'user-name'}>{user.firstName} {user.lastName}</h1>
+                <div className={'profile__content'}>
                     <button onClick={e => changeContent('posts')}>Post</button>
                     <button onClick={e => changeContent('friends')}>Friends</button>
                     {friendRequestButton}
