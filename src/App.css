@@ -144,6 +144,11 @@ p {
   word-break: break-all;
 }
 
+.log-in h1,
+.sign-up h1 {
+  color: white;
+}
+
 .log-in form,
 .sign-up form {
   color: white;

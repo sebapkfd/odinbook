@@ -17,6 +17,7 @@ const LogIn = () => {
 
     return (
         <div className='log-in'>
+            <h1>Log in Odinbook</h1>
             <form onSubmit={submitData}>
                 <label>Email</label>
                 <input
