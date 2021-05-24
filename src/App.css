@@ -8,6 +8,10 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+button {
+  font-family: Verdana, sans-serif;
+}
+
 .log-in,
 .sign-up,
 .comment-edit, 
@@ -51,8 +55,16 @@ body {
   width: 35vw;
 }
 
+.post-item__username {
+  font-size: 0.6em;
+}
+
 .post-item__text {
   align-content: flex-start;
+}
+
+.post-item__text p {
+  margin: 0;
 }
 
 .user-name {
@@ -79,7 +91,8 @@ body {
 }
 
 .open-session button,
-.close-session button {
+.close-session button,
+button {
   background-color: rgb(14, 14, 14);
   color: white;
   border: none;
@@ -88,7 +101,9 @@ body {
 }
 
 .open-session button:hover,
-.close-session a button:hover {
+.close-session a button:hover,
+button:hover,
+.edit:hover {
   background-color: rgb(50, 50, 50);
 }
 
@@ -148,7 +163,7 @@ p {
   word-break: break-all;
   text-align: left;
   color: white;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
 .log-in h1,
@@ -189,4 +204,18 @@ p {
   width: 80%;
   height: 2rem;
   margin: 1em 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  padding-left: 15px;
+}
+.options button {
+  margin: 3px 5px 3px 0;
+  font-size: 12px;
+}
+
+.Liked {
+  color: rgb(84, 77, 192);
 }

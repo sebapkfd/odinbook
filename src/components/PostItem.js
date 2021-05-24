@@ -29,7 +29,7 @@ const PostItem = (props) => {
 
     return (
         <div className={'post-item'}>
-            <p>{post.user.firstName} {post.user.lastName}</p>
+            <p className={'post-item__username'}>{post.user.firstName} {post.user.lastName}</p>
             <div className={'post-item__text'}>
                 {text}
             </div>

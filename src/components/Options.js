@@ -28,16 +28,15 @@ const Options = (props) => {
     const userId = (verifySession()) ? JSON.parse(localStorage.getItem('userSession')).user._id : null;
     const deleteButton = (element.user._id === userId) ? <button onClick={deleteData}>Delete</button>: null;
     const editButton = (element.user._id === userId) ? <button>Edit</button>: null;
-    const likeButton = <button onClick={submitLike}>{like}</button>
+    const likeButton = <button onClick={submitLike} className={like}>{likeCounter} {like}</button>
 
     return (
-        <div>
-            <p>{likeCounter}</p>
+        <div className={'options'}>
             {likeButton}
             {deleteButton}
-            <Link to={editLink}>
-                {editButton}
-            </Link>
+                <Link to={editLink}>
+                    {editButton}
+                </Link>
         </div>
     )
 }
