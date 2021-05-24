@@ -22,16 +22,7 @@ const Navbar = () => {
                 <LogOut/>
             </div>
         </div>
-    ):(
-        <div className='close-session'>
-            <Link to='/signup'>
-                <button>Sign Up</button>
-            </Link>
-            <Link to='/login'>
-                <button>Log In</button>
-            </Link>
-        </div>
-    );
+    ):( null );
 
     return (
         <div className='navbar'>

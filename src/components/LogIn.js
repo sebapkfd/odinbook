@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {logIn} from '../functions/userCalls';
-import {useHistory} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
 
 const LogIn = () => {
     const [email, setEmail] = useState('');
@@ -40,6 +40,9 @@ const LogIn = () => {
                 />
                 <button>Log In</button>
             </form>
+            <div className={'sign-up__link'}>
+                <p>New to Odinbook? <Link to='/signup'>Create an account.</Link></p>
+            </div>
         </div>
     )
 }

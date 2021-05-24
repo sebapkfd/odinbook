@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {signUp} from '../functions/userCalls';
+import {Link} from 'react-router-dom';
 
 const SignUp = () => {
     const [firstName, setFirstName] = useState('');
@@ -70,6 +71,9 @@ const SignUp = () => {
                 />
                 <button>Sign Up</button>
             </form>
+            <div className={'log-in__link'}>
+                <p>You have an account? <Link to='/login'>Log in</Link></p>
+            </div>
         </div>
     )
 }
