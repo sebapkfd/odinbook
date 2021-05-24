@@ -27,8 +27,8 @@ const PostEdit = () => {
     if(post) {
         return (
             <div className={'post-edit'}>
+                <h1>Edit Post</h1>
                 <form>
-                    <label>Edit Post</label>
                     <textarea
                         name='text'
                         required={true}

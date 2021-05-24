@@ -27,8 +27,8 @@ const CommentEdit = () => {
     if(comment) { 
         return (
             <div className={'comment-edit'}>
+                <h1>Edit Comment </h1>
                 <form>
-                    <label>Edit Comment</label>
                     <textarea
                         name={'text'}
                         required={true}
