@@ -55,15 +55,20 @@ button {
   width: 35vw;
 }
 
-.post-item__username {
+.post-item__username,
+.comment-item__username {
   font-size: 0.6em;
+  margin-bottom: 0;
 }
 
-.post-item__text {
+.post-item__text,
+.comment-item__text {
   align-content: flex-start;
+  margin: 5px 0;
 }
 
-.post-item__text p {
+.post-item__text p,
+.comment-item__text p {
   margin: 0;
 }
 
@@ -212,7 +217,7 @@ p {
   padding-left: 15px;
 }
 .options button {
-  margin: 3px 5px 3px 0;
+  margin: 0 5px 3px 0;
   font-size: 12px;
 }
 
