@@ -6,7 +6,7 @@ const CommentList = (props) => {
     return (
         <div className={'comment-list'}>
             {comments.map(comment => {
-                return <CommentItem key={comment._id} comment={comment}/>
+                return <CommentItem key={comment._id} comment={comment} defaultState={true}/>
             })}
         </div>
     )
