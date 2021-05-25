@@ -314,3 +314,8 @@ p {
 .sign-up__link a{
   color:rgb(84, 77, 192);
 }
+
+.log-in__link a:hover,
+.sign-up__link a:hover{
+  text-decoration: underline;
+}
