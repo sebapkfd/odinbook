@@ -8,7 +8,6 @@ const LogOut = () => {
         e.preventDefault();
         localStorage.clear();
         history.push('/');
-        window.location.reload();
     }
 
     const LogOutButton = (verifySession()) ? <button onClick={clearData}>Log Out</button> : null;

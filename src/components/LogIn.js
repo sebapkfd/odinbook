@@ -12,7 +12,6 @@ const LogIn = () => {
         const body = {username: email, password};
         await logIn(body);
         history.push('/');
-        window.location.reload();
     }
 
     return (
