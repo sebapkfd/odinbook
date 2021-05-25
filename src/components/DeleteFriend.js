@@ -9,14 +9,10 @@ const DeleteFriend = (props) => {
         await removeFriend({sender, friend})
         onDelete();
     }
-
-    const deleteButton = (user.friendList.includes(sender)) ? (
-        <button onClick={submitData}>Delete Friend</button>
-    ): ( null );
     
     return (
         <div className={'delete-friend'}>
-            {deleteButton}
+            <button onClick={submitData}>Delete Friend</button>
         </div>
     )
 }

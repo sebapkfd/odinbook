@@ -11,12 +11,16 @@ const UserItem = (props) => {
     const buttons = {
         'NotFriends' : <AddFriend user={user}/>,
         'Friends': <DeleteFriend user={user} onDelete={() =>setFriendOption('NotFriends')}/>,
-        'Requests': <RequestOptions user={user}/>,
+        'Requests': <RequestOptions user={user} managaRequest={(value) =>handleRequest(value)}/>,
     }
 
     const redirectPage = (path) => {
         history.push(path);
         window.location.reload();
+    }
+
+    const handleRequest = (value) => {
+        (value) ? setFriendOption('Friends') : setFriendOption('NotFriends');
     }
 
 
