@@ -320,10 +320,6 @@ p {
   text-decoration: underline;
 }
 
-.empty {
-  /* background-color: red; */
-}
-
 .empty p{
   text-align: center;
   font-size: 1.8em

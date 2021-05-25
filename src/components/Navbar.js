@@ -9,7 +9,6 @@ const Navbar = () => {
 
     const redirectPage = (path) => {
         history.push(path);
-        window.location.reload();
     }
 
     const sessionOpts = (verifySession()) ? (
