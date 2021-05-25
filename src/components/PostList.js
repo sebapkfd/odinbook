@@ -2,14 +2,14 @@ import PostItem from './PostItem';
 import Empty from './Empty';
 
 const PostList = (props) => {
-    const {posts, source} = props;
+    const {posts} = props;
 
     if (posts.length > 0) {
         return (
             <div className={'post-list'}>
                 {posts.map(post => {
                     return (
-                        <PostItem key={post._id} post={post} useLink={true} source={source}/>
+                        <PostItem key={post._id} post={post} useLink={true} defaultState={true}/>
                     )
                 })}
             </div>
