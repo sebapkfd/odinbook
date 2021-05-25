@@ -1,4 +1,5 @@
 import UserItem from './UserItem';
+import Empty from './Empty';
 
 const UserList = (props) => {
     const {users, option} = props;
@@ -13,7 +14,7 @@ const UserList = (props) => {
             </div>
         )
     }
-    return null;
+    return <Empty/>;
 }
 
 export default UserList;
