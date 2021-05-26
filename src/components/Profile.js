@@ -30,18 +30,18 @@ const Profile = () => {
         getData();// eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id])
 
-    if (user) {
+    if (user && posts) {
         const userId = (verifySession()) ? JSON.parse(localStorage.getItem('userSession')).user._id : null;
         const friendRequestButton = (userId === user._id) ? (
-            <button onClick={e => changeContent('requests')}>Friend Requests</button>
+            <button onClick={() => changeContent('requests')}>Friend Requests</button>
         ) : (null);
 
         return (
             <div className={'profile'}>
                 <h1 className={'user-name'}>{user.firstName} {user.lastName}</h1>
                 <div className={'profile__content'}>
-                    <button onClick={e => changeContent('posts')}>Post</button>
-                    <button onClick={e => changeContent('friends')}>Friends</button>
+                    <button onClick={() => changeContent('posts')}>Post</button>
+                    <button onClick={() => changeContent('friends')}>Friends</button>
                     {friendRequestButton}
                 </div>
                 {content}
