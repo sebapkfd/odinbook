@@ -4,7 +4,6 @@ import Empty from './Empty';
 const UserList = (props) => {
     const {users, option} = props;
 
-
     if (users.length > 0) {
         return (
             <div className={'user-list'}>
