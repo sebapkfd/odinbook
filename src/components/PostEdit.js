@@ -11,6 +11,7 @@ const PostEdit = () => {
     const getData = async () => {
         const {postDetail} = await getPostDetail(id);
         setPost(postDetail);
+        setText(postDetail.text);
     };
 
     const submitData = async (e) => {
@@ -38,7 +39,7 @@ const PostEdit = () => {
                         name='text'
                         required={true}
                         maxLength={200}
-                        defaultValue={post.text}
+                        value={text}
                         onChange={e => setText(e.target.value)}
                     />
                     <div>

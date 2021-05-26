@@ -11,6 +11,7 @@ const CommentEdit = () => {
     const getData = async () => {
         const commentDetail = await getCommentDetail(id);
         setComment(commentDetail);
+        setText(commentDetail.text);
     }
 
     const submitData = async (e) => {
@@ -38,7 +39,7 @@ const CommentEdit = () => {
                         name={'text'}
                         required={true}
                         maxLength={200}
-                        defaultValue={comment.text}
+                        value={text}
                         onChange={e => setText(e.target.value)}
                     />
                     <div>
