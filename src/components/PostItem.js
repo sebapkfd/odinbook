@@ -32,7 +32,9 @@ const PostItem = (props) => {
     if(render) {
         return (
             <div className={'post-item'}>
-                <p className={'post-item__username'}>{post.user.firstName} {post.user.lastName}</p>
+                <Link to={`/users/${post.user._id}`}>
+                    <p className={'post-item__username'}>{post.user.firstName} {post.user.lastName}</p>
+                </Link>
                 <div className={'post-item__text'}>
                     {text}
                 </div>

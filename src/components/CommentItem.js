@@ -1,6 +1,7 @@
 import Options from './Options';
 import {deleteComment, likeComment} from '../functions/commentsCalls';
 import { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 const CommentItem = (props) => {
     const {comment, defaultState} = props;
@@ -23,7 +24,9 @@ const CommentItem = (props) => {
     if(render) {
         return (
             <div className={'comment-item'}>
-                <p className={'comment-item__username'}>{comment.user.firstName} {comment.user.lastName}</p>
+                <Link to={`/users/${comment.user._id}`}>
+                    <p className={'comment-item__username'}>{comment.user.firstName} {comment.user.lastName}</p>
+                </Link>
                 <div className={'comment-item__text'}>
                     <p>{comment.text}</p>
                 </div>

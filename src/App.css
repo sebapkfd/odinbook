@@ -61,6 +61,11 @@ button {
   margin-bottom: 0;
 }
 
+.post-item__username:hover,
+.comment-item__username:hover {
+  text-decoration: underline;
+}
+
 .post-item__text,
 .comment-item__text {
   align-content: flex-start;
