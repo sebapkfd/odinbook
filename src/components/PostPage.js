@@ -24,7 +24,7 @@ const PostPage = () => {
         return (
             <div className={'post-page'}>
                 <p>{post.user.firstName} {post.user.lastName}</p>
-                <PostItem post={post} useLink={false}/>
+                <PostItem post={post} useLink={false} defaultState={true}/>
                 <CommentInput/>
                 <CommentList comments={comments}/>
             </div>
