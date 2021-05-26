@@ -1,5 +1,6 @@
 import verifySession from '../functions/verifySession';
 import {Route, Redirect} from 'react-router-dom';
+import Navbar from './Navbar';
 
 const Router = (props) => {
     const {component, path} = props;
@@ -13,7 +14,10 @@ const Router = (props) => {
     )
 
     return (
-        <div>{option}</div>
+        <div>
+            <Navbar/>
+            {option}
+        </div>
     )
 }
 

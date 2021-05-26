@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 
 const Navbar = () => {
     let history = useHistory();
-
     const user = (verifySession()) ? JSON.parse(localStorage.getItem('userSession')).user._id : null;
 
     const redirectPage = (path) => {

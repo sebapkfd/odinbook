@@ -7,7 +7,7 @@ const PostItem = (props) => {
     const {post, useLink, defaultState} = props;
     const user = JSON.parse(localStorage.getItem('userSession')).user._id;
     const {likes} = post;
-    const [render, setRender] =useState(defaultState);
+    const [render, setRender] = useState(defaultState);
 
     const deleteData = async () => {
         await deletePost(post._id);

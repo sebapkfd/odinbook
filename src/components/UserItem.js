@@ -16,7 +16,6 @@ const UserItem = (props) => {
 
     const redirectPage = (path) => {
         history.push(path);
-        window.location.reload();
     }
 
     const handleRequest = (value) => {

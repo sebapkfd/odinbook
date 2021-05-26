@@ -28,7 +28,7 @@ const Profile = () => {
 
     useEffect(() => {
         getData();// eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [id])
 
     if (user) {
         const userId = (verifySession()) ? JSON.parse(localStorage.getItem('userSession')).user._id : null;
