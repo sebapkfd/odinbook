@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {logIn, logInFacebook} from '../functions/userCalls';
+import {logIn} from '../functions/userCalls';
 import {useHistory, Link} from 'react-router-dom';
 
 const LogIn = () => {
@@ -12,10 +12,6 @@ const LogIn = () => {
         const body = {username: email, password};
         await logIn(body);
         history.push('/');
-    }
-
-    const fbLogin = async () => {
-        await logInFacebook();
     }
 
     return (
@@ -46,7 +42,6 @@ const LogIn = () => {
             <div className={'sign-up__link'}>
                 <p>New to Odinbook? <Link to='/signup'>Create an account.</Link></p>
             </div>
-            <button onClick={() => fbLogin()}>Log In with Facebook</button>
         </div>
     )
 }
