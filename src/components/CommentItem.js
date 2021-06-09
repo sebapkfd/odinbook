@@ -7,7 +7,7 @@ const CommentItem = (props) => {
     const {comment, defaultState} = props;
     const user = JSON.parse(localStorage.getItem('userSession')).user._id;
     const {likes} = comment;
-    const [render, setRender] =useState(defaultState);
+    const [render, setRender] = useState(defaultState);
 
     const deleteData = async () => {
         await deleteComment(comment._id);

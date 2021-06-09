@@ -1,6 +1,8 @@
+const server = 'https://immense-inlet-51361.herokuapp.com/';
+
 export const signUp = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/signup',{
+        const response = await fetch(server + 'signup',{
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(body)
@@ -14,7 +16,7 @@ export const signUp = async (body) => {
 
 export const logIn = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/login', {
+        const response = await fetch(server + 'login', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(body)
@@ -30,7 +32,7 @@ export const logIn = async (body) => {
 
 export const getUserDetail = async (id) => {
     try {
-        const response = await fetch('http://localhost:5000/users/'+ id, {
+        const response = await fetch(server + 'users/'+ id, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json", 
@@ -46,7 +48,7 @@ export const getUserDetail = async (id) => {
 
 export const getUserList = async () => {
     try {
-        const response = await fetch('http://localhost:5000/users/', {
+        const response = await fetch(server + 'users/', {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json", 
@@ -62,7 +64,7 @@ export const getUserList = async () => {
 
 export const getOtherUsersList = async (id) => {
     try {
-        const response = await fetch('http://localhost:5000/users/others/' + id, {
+        const response = await fetch(server + 'users/others/' + id, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json", 
@@ -78,7 +80,7 @@ export const getOtherUsersList = async (id) => {
 
 export const sendFriendRequest = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/users/others', {
+        const response = await fetch(server + 'users/others', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json", 
@@ -95,7 +97,7 @@ export const sendFriendRequest = async (body) => {
 
 export const cancelFriendRequest = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/users/others', {
+        const response = await fetch(server + 'users/others', {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json", 
@@ -113,7 +115,7 @@ export const cancelFriendRequest = async (body) => {
 export const answerRequest = async (value, body) => {
     try {
         if (value) {
-            const response = await fetch('http://localhost:5000/users/requests', {
+            const response = await fetch(server + 'users/requests', {
                 method: 'PUT',
                 headers: {
                 "Content-Type": "application/json", 
@@ -125,7 +127,7 @@ export const answerRequest = async (value, body) => {
             return data;
         }
         else {
-            const response = await fetch('http://localhost:5000/users/others', {
+            const response = await fetch(server + 'users/others', {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json", 
@@ -143,7 +145,7 @@ export const answerRequest = async (value, body) => {
 
 export const removeFriend = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/users/friends', {
+        const response = await fetch(server + 'users/friends', {
             method: 'PUT',
             headers: {
             "Content-Type": "application/json", 

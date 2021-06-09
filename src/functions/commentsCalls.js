@@ -1,6 +1,8 @@
+const server = 'https://immense-inlet-51361.herokuapp.com/';
+
 export const createComment = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/comments', {
+        const response = await fetch(server + 'comments', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json", 
@@ -17,7 +19,7 @@ export const createComment = async (body) => {
 
 export const deleteComment = async (id) => {
     try {
-        const response = await fetch('http://localhost:5000/comments/' + id, {
+        const response = await fetch(server + 'comments/' + id, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json", 
@@ -34,7 +36,7 @@ export const deleteComment = async (id) => {
 
 export const getCommentDetail = async (id) => {
     try {
-        const response = await fetch('http://localhost:5000/comments/' + id, {
+        const response = await fetch(server + 'comments/' + id, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json", 
@@ -50,7 +52,7 @@ export const getCommentDetail = async (id) => {
 
 export const editComment = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/comments/' + body.id, {
+        const response = await fetch(server + 'comments/' + body.id, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json", 
@@ -67,7 +69,7 @@ export const editComment = async (body) => {
 
 export const likeComment = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/comments/' + body.id + '/like', {
+        const response = await fetch(server + 'comments/' + body.id + '/like', {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json", 

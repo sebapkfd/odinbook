@@ -1,6 +1,8 @@
+const server = 'https://immense-inlet-51361.herokuapp.com/';
+
 export const getPostList = async () => {
     try {
-        const response = await fetch('http://localhost:5000/posts', {
+        const response = await fetch(server + 'posts', {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json", 
@@ -16,7 +18,7 @@ export const getPostList = async () => {
 
 export const getPostDetail = async (id) => {
     try {
-        const response = await fetch('http://localhost:5000/posts/'+ id, {
+        const response = await fetch(server + 'posts/'+ id, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json", 
@@ -32,7 +34,7 @@ export const getPostDetail = async (id) => {
 
 export const createPost = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/posts', {
+        const response = await fetch(server + 'posts', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json", 
@@ -49,7 +51,7 @@ export const createPost = async (body) => {
 
 export const deletePost = async (id) => {
     try {
-        const response = await fetch('http://localhost:5000/posts/' + id, {
+        const response = await fetch(server + 'posts/' + id, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json", 
@@ -66,7 +68,7 @@ export const deletePost = async (id) => {
 
 export const editPost = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/posts/' + body.id, {
+        const response = await fetch(server + 'posts/' + body.id, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json", 
@@ -83,7 +85,7 @@ export const editPost = async (body) => {
 
 export const likePost = async (body) => {
     try {
-        const response = await fetch('http://localhost:5000/posts/' + body.id + '/like', {
+        const response = await fetch(server + 'posts/' + body.id + '/like', {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json", 
