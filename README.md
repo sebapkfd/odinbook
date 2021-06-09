@@ -4,6 +4,8 @@ Small project, built for assignment as part of the curriculum for [The Odin Proj
 
 ## [Live demo of the project](https://sebapkfd.github.io/odinbook)
 
+## [Backend Repository](https://github.com/sebapkfd/odin-back)
+
 ### Built with: 
 * JavaScript
 * CSS
@@ -11,6 +13,7 @@ Small project, built for assignment as part of the curriculum for [The Odin Proj
 * Git
 * Npm
 * [Create React App](https://github.com/facebook/create-react-app)
+
 
 In the project directory, you can run:
 
