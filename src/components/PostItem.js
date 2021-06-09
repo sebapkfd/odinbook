@@ -20,7 +20,7 @@ const PostItem = (props) => {
     }
 
     const text = (useLink) ? (
-        <Link to={`/posts/${post._id}`}>
+        <Link to={`/odinbook/posts/${post._id}`}>
             <p>{post.text}</p>
         </Link>
     ) : (
@@ -32,7 +32,7 @@ const PostItem = (props) => {
     if(render) {
         return (
             <div className={'post-item'}>
-                <Link to={`/users/${post.user._id}`}>
+                <Link to={`/odinbook/users/${post.user._id}`}>
                     <p className={'post-item__username'}>{post.user.firstName} {post.user.lastName}</p>
                 </Link>
                 <div className={'post-item__text'}>
@@ -42,7 +42,7 @@ const PostItem = (props) => {
                     element={post}
                     deleteFunction={deleteData}
                     likeFunction={submitLike}
-                    editLink={`/posts/edit/${post._id}`}
+                    editLink={`/odinbook/posts/edit/${post._id}`}
                     initialLikeStatus={likeStatus}
                     likes={likes}
                 />

@@ -7,7 +7,7 @@ const LogOut = () => {
     const clearData = (e) => {
         e.preventDefault();
         localStorage.clear();
-        history.push('/');
+        history.push('/odinbook');
     }
 
     const LogOutButton = (verifySession()) ? <button onClick={clearData}>Log Out</button> : null;

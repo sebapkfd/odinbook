@@ -10,7 +10,7 @@ const Router = (props) => {
             {component}
         </Route>
     ):(
-        <Redirect to='/login'/>
+        <Redirect to='/odinbook/login'/>
     )
 
     return (

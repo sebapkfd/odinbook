@@ -11,7 +11,7 @@ const LogIn = () => {
         e.preventDefault();
         const body = {username: email, password};
         await logIn(body);
-        history.push('/');
+        history.push('/odinbook');
     }
 
     return (
@@ -40,7 +40,7 @@ const LogIn = () => {
                 <button>Log In</button>
             </form>
             <div className={'sign-up__link'}>
-                <p>New to Odinbook? <Link to='/signup'>Create an account.</Link></p>
+                <p>New to Odinbook? <Link to='/odinbook/signup'>Create an account.</Link></p>
             </div>
         </div>
     )

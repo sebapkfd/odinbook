@@ -24,7 +24,7 @@ const CommentItem = (props) => {
     if(render) {
         return (
             <div className={'comment-item'}>
-                <Link to={`/users/${comment.user._id}`}>
+                <Link to={`/odinbook/users/${comment.user._id}`}>
                     <p className={'comment-item__username'}>{comment.user.firstName} {comment.user.lastName}</p>
                 </Link>
                 <div className={'comment-item__text'}>
@@ -34,7 +34,7 @@ const CommentItem = (props) => {
                     element={comment}
                     deleteFunction={deleteData}
                     likeFunction={submitLike}
-                    editLink={`/comments/edit/${comment._id}`}
+                    editLink={`/odinbook/comments/edit/${comment._id}`}
                     initialLikeStatus={likeStatus}
                     likes={likes}
                 />

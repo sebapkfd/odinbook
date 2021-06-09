@@ -22,7 +22,7 @@ const UserItem = (props) => {
         (value) ? setFriendOption('Friends') : setFriendOption('NotFriends');
     }
 
-    const userName = <button onClick={() => redirectPage(`/users/${user._id}`)} className={'user-name-button'}>
+    const userName = <button onClick={() => redirectPage(`/odinbook/users/${user._id}`)} className={'user-name-button'}>
                         {user.firstName}
                     </button>;
 

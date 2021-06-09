@@ -18,7 +18,7 @@ const CommentEdit = () => {
         e.preventDefault();
         const body = {id, text, user: comment.user, post: comment.post, likes: comment.likes};
         await editComment(body);
-        history.push(`/posts/${comment.post}`);
+        history.push(`/odinbook/posts/${comment.post}`);
     }
 
     const cancelEdit = (e) => {

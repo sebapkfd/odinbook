@@ -15,18 +15,18 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route exact path={'/signup'}>
+          <Route exact path={'/odinbook/signup'}>
             <SignUp/>
           </Route>
-          <Route exact path={'/login'}>
+          <Route exact path={'/odinbook/login'}>
             <LogIn/>
           </Route>
-          <Router component={<CommentEdit/>} path={'/comments/edit/:id'}/>
-          <Router component={<PostEdit/>} path={'/posts/edit/:id'}/>
-          <Router component={<PostPage/>} path={'/posts/:id'}/>
-          <Router component={<Profile/>} path={'/users/:id'}/>
-          <Router component={<UsersPage/>} path={'/users'}/>
-          <Router component={<Home/>} path={'/'}/>
+          <Router component={<CommentEdit/>} path={'/odinbook/comments/edit/:id'}/>
+          <Router component={<PostEdit/>} path={'/odinbook/posts/edit/:id'}/>
+          <Router component={<PostPage/>} path={'/odinbook/posts/:id'}/>
+          <Router component={<Profile/>} path={'/odinbook/users/:id'}/>
+          <Router component={<UsersPage/>} path={'/odinbook/users'}/>
+          <Router component={<Home/>} path={'/odinbook'}/>
         </Switch>
       </BrowserRouter>
     </div>

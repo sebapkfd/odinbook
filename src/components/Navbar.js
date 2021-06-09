@@ -14,10 +14,10 @@ const Navbar = () => {
         return (
             <div className='navbar'>
                 <div className='open-session'>
-                    <button onClick={() => redirectPage('/')}>Home</button>
+                    <button onClick={() => redirectPage('/odinbook')}>Home</button>
                     <div className={'open-session__links'}>
-                        <button onClick={() => redirectPage(`/users/${user}`)}>Profile</button>
-                        <button onClick={() => redirectPage(`/users`)}>Find friends</button>
+                        <button onClick={() => redirectPage(`/odinbook/users/${user}`)}>Profile</button>
+                        <button onClick={() => redirectPage(`/odinbook/users`)}>Find friends</button>
                         <LogOut/>
                     </div>
                 </div>
